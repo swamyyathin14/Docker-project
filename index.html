@@ -1,0 +1,115 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tom and Jerry Fun</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background: linear-gradient skyblue, lightblue;
+            overflow: hidden;
+        }
+
+        header {
+            background: #ffcc00;
+            padding: 25px;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 38px;
+        }
+
+        p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .scene {
+            height: 350px;
+            background: linear-gradient(to bottom, #87ceeb 65%, #55b84a 65%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .tom {
+            position: absolute;
+            font-size: 90px;
+            bottom: 30px;
+            left: -150px;
+            animation: tomRun 5s linear infinite;
+        }
+
+        .jerry {
+            position: absolute;
+            font-size: 55px;
+            bottom: 35px;
+            left: -100px;
+            animation: jerryRun 5s linear infinite;
+        }
+
+        @keyframes tomRun {
+            0% { left: -150px; }
+            100% { left: 110%; }
+        }
+
+        @keyframes jerryRun {
+            0% { left: -100px; }
+            100% { left: 115%; }
+        }
+
+        .message {
+            padding: 30px;
+            color: #333;
+        }
+
+        button {
+            background: #ff6600;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #cc4400;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>🐱 Tom and Jerry 🐭</h1>
+        <p>Welcome to the funniest chasing game!</p>
+    </header>
+
+    <div class="scene">
+        <div class="tom">🐱</div>
+        <div class="jerry">🐭</div>
+    </div>
+
+    <div class="message">
+        <h2>Welcome Friends!</h2>
+        <p>Tom is chasing Jerry. Will he ever catch him?</p>
+        <br>
+        <button onclick="alert('Jerry escaped again! 😂')">
+            Click Me!
+        </button>
+    </div>
+
+</body>
+</html>
+
